@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>CODEC JS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    </head>
+    <body>
+        <div class="container container-table">
+            <div class="row vertical-center-row">
+                <div class="background">
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-6">
+                            <div id="msform">
+                                <ul id="progressbar">
+                                    <li class="active">Matrice</li>
+                                    <li>Fichier</li>
+                                    <li>Action</li>
+                                </ul>
+                                <fieldset>
+                                    <h2 class="fs-title">Etape 1:</h2>
+                                    <h3 class="fs-subtitle">Charger la matrice G4C</h3>
+                                    <input type="file" id="file_step_1" onchange="processStep1();">
+                                    <input type="button" class="next action-button" id="next_step_1" style="display: none;" value="Suivant">
+                                </fieldset>
+                                <fieldset>
+                                    <h2 class="fs-title">Etape 2:</h2>
+                                    <h3 class="fs-subtitle">Selectionner un fichier à traiter</h3>
+                                    <input type="file" id="file_step_2" onchange="processStep2();">
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Précédent">
+                                    <input type="button" name="next" class="next action-button" id="next_step_2" style="display: none;" value="Suivant">
+                                </fieldset>
+                                <fieldset>
+                                    <h2 class="fs-title">Etape 3:</h2>
+                                    <h3 class="fs-subtitle">Selectionner une option</h3>
+                                    <input type="submit" class="action-button" onclick="encode();" value="Encoder"/>
+                                    <input type="button" class="action-button-previous" onclick="decode();" value="Decoder"/>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/codec.js"></script>
+    </body>
+</html>
